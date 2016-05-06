@@ -7,15 +7,31 @@
 //
 
 import UIKit
+import RealmSwift
+
+let realm = try! Realm() // Константа для сохранения и извлечения данных в памяти
+
+//===================================//
+// MARK: - Глобальные переменные для всего приложения
+//===================================//
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+  
+  //===================================//
+  // MARK: - Глобальные переменные для AppDelegate
+  //===================================//
 
   var window: UIWindow?
-
-
+  
+  //===================================//
+  // MARK: - Методы загружаемые в различные моменты работы приложения
+  //===================================//
+  
+  //-----------------------------------// Метод запускается при успешной загрузке приложения
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
+
     return true
   }
 
@@ -40,7 +56,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
-
 
 }
 
